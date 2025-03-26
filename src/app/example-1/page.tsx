@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import thumbe from "../../../public/thumbe.jpg"
+import thumbe from "../../../public/thumbe.jpg";
 
 export default function page() {
   return (
@@ -8,12 +8,12 @@ export default function page() {
       <Image
         src={thumbe}
         alt="image"
-        // width={400}
+        // width={400} when we have local image like that above
         // height={224.146}
         className="w-[250px] md:w-[400px] h-auto rounded"
         sizes="(max-width: 768px) 250px, 400px"
-        placeholder="blur"
-        priority
+        placeholder="blur" // for local image
+        priority // before fold
       />
       <div className="max-w-[300px]">
         <h1 className="text-3xl font-bold mb-3">Welcome to StockPrices</h1>
